@@ -6,7 +6,7 @@
 
 ## Descriere
 Aplicatie client-server, multiclient ce va trata fiecare conexiune pe cate un thread separat si va stoca o lista cu persoane, pe baza datelor trimise de catre client. 
-Threadul va crea o entitate pentru fiecare mesaj cu tipul corespunzator si le va stoca intr-o lista. La final, serverul va sorta lista pe baza varstei persoanelor si va afisa in consola rezultatul
+Threadul va crea o entitate pentru fiecare mesaj cu tipul corespunzator si le va stoca intr-o lista. La final, serverul va sorta lista pe baza varstei persoanelor si va afisa in consola rezultatul.
 
 ## Diagrame clase utilizate
 
@@ -45,13 +45,13 @@ Threadul va crea o entitate pentru fiecare mesaj cu tipul corespunzator si le va
 <img src="./res/img/diagrama_client_server.png">
 
 ## Multiclient
-Prin tratarea fiecarei conexiuni pe cate un thread individual, pot exista mai multe instante in acelasi timp
+Prin tratarea fiecarei conexiuni pe cate un thread individual, pot exista mai multe instante in acelasi timp.
 <br></br>
 <img src="./res/img/multiclient.png">
 
 ## Demo
-După realizarea conexiunii, clientul va trimite mesaje de forma Tip Valoare_Camp
-Ex. Student Dorobantu Gabriel ATM 22 4
+Se ruleaza cele 2 programe cu parametri respectivi (port, hostname).
+După realizarea conexiunii, clientul va trimite mesaje de forma Tip Valoare_Camp, ex: "Student Dorobantu Gabriel ATM 22 4". Pentru a se incheia sesiunea, se va trimite mesajul "exit" urmand ca apoi sa primim lista sortata si sa o afisam in consola.
 <br></br>
 <img src="./res/img/usage.png">
 
@@ -59,13 +59,13 @@ Ex. Student Dorobantu Gabriel ATM 22 4
 Dupa primirea datelor de la client, serverul va evalua daca datele primite au forma asteptata
   - Daca datele primite sunt conform asteptarilor, se va crea entitatea respectiva si va fi adaugata in lista
   - Daca ceva nu este in regula, va renunta la executarea actiunii
- Finalitatea actiunilor serverului este: acesta va semnala clientul cu rezultatul actiunii (added, already exists, failed, usage, ...)
+ Finalitatea actiunilor serverului este: acesta va semnala clientul cu rezultatul actiunii (added, already exists, failed, usage, ...).
 <br></br>
 <img src="./res/img/error_handling.jpg">
 
 ## Server log
-Fiecare actiune trebuie jurnalizata la nivelul serverului
-Sunt afisate rezultatele acestora la consola
+Fiecare actiune trebuie jurnalizata la nivelul serverului.
+Sunt afisate rezultatele acestora la consola.
 <br></br>
 <img src="./res/img/log_server.png">
 
